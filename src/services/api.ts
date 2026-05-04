@@ -1,6 +1,6 @@
 import type { FoodHistory, Analysis, UploadResult } from "../types/food";
 
-export const BASE_URL = "http://localhost:5400";
+export const BASE_URL = import.meta.env.VITE_API_URL;
 
 export const getImageUrl = (image: string) =>
   image.startsWith("http") ? image : `${BASE_URL}/images/${image}`;
